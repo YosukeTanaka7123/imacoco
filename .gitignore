@@ -1,0 +1,28 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# root
+/.vscode/
+
+# frontend
+### next.js
+/frontend/.next/
+/frontend/out/
+
+### dependencies
+/frontend/node_modules/
+
+### testing
+/frontend/coverage
+
+### production
+/frontend/build
+
+### debug
+/frontend/yarn-debug.log*
+/frontend/yarn-error.log*
+
+### typescript
+/frontend/next-env.d.ts
+
+# backend
+### none

@@ -1,0 +1,79 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
+{
+    "name": "${localWorkspaceFolderBasename}",
+    // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+    "build": {
+      "dockerfile": "Dockerfile"
+    },
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+    "workspaceFolder": "/workspace",
+    "runArgs": [
+      "--init",
+      "--name=imacoco-dev",
+      "--add-host=host.docker.internal:host-gateway"
+    ],
+    // Sock Mount for Docker from Docker.
+    "mounts": [
+      "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+    ],
+    // Bind Mount for Docker from Docker.
+    "remoteEnv": {
+      "PROJECT_ROOT": "${localWorkspaceFolder}"
+    },
+    // Features to add to the dev container. More info: https://containers.dev/features.
+    // "features": {},
+  
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    // "forwardPorts": [],
+  
+    // Use 'postCreateCommand' to run commands after the container is created.
+    // "postCreateCommand": "uname -a",
+  
+    // Configure tool-specific properties.
+    // "customizations": {},
+    "customizations": {
+      // Configure properties specific to VS Code.
+      "vscode": {
+        // Set *default* container specific settings.json values on container create.
+        "settings": {
+          // common
+          "npm.packageManager": "yarn",
+          "eslint.packageManager": "yarn",
+          "code-eol.color": "#444",
+          "editor.tabSize": 2,
+          "editor.codeActionsOnSave": [
+            "source.addMissingImports",
+            "source.fixAll.eslint"
+          ],
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+          "editor.formatOnSave": true,
+          "prettier.prettierPath": "./node_modules/prettier",
+          "dev.containers.copyGitConfig": true
+
+          // for the frontend
+          // none
+
+          // for the backend
+          // none
+        },
+        "extensions": [
+          // common
+          "sohamkamani.code-eol",
+          "ms-azuretools.vscode-docker",
+
+          // for the frontend
+          "dbaeumer.vscode-eslint",
+          "esbenp.prettier-vscode",
+
+          // for the backend
+          // none
+        ]
+      }
+    },
+
+    // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+    // "remoteUser": "root"
+    "remoteUser": "vscode"
+  }
+  
