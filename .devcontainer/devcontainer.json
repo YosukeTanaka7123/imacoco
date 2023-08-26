@@ -39,7 +39,6 @@
         "settings": {
           // common
           "npm.packageManager": "yarn",
-          "eslint.packageManager": "yarn",
           "code-eol.color": "#444",
           "editor.tabSize": 2,
           "editor.codeActionsOnSave": [
@@ -48,8 +47,12 @@
           ],
           "editor.defaultFormatter": "esbenp.prettier-vscode",
           "editor.formatOnSave": true,
-          "prettier.prettierPath": "./node_modules/prettier",
-          "dev.containers.copyGitConfig": true
+          "prettier.prettierPath": "./frontend/node_modules/prettier",
+          "dev.containers.copyGitConfig": true,
+          
+          // ESLint resolves configuration files (e.g. eslintrc, .eslintignore).
+          // @see https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint#settings-options
+          "eslint.workingDirectories": [{"mode" :"auto"}]
 
           // for the frontend
           // none
@@ -64,7 +67,7 @@
 
           // for the frontend
           "dbaeumer.vscode-eslint",
-          "esbenp.prettier-vscode",
+          "esbenp.prettier-vscode"
 
           // for the backend
           // none
