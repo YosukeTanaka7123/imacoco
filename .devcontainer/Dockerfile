@@ -10,7 +10,7 @@ RUN <<-EOF
 
 	# install commons
 	apt-get update
-	apt-get install -y --no-install-recommends sudo curl ca-certificates lsb-release git
+	apt-get install -y --no-install-recommends sudo curl ca-certificates lsb-release git ssh
 
 	## install docker
 	cat <<-EOS > /etc/apt/sources.list.d/docker.sources
