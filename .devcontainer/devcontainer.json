@@ -52,16 +52,26 @@
 
         // ESLint resolves configuration files (e.g. eslintrc, .eslintignore).
         // @see https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint#settings-options
-        "eslint.workingDirectories": [{ "mode": "auto" }]
+        "eslint.workingDirectories": [{ "mode": "auto" }],
 
         // for the frontend
         // none
 
         // for the backend
         // none
+
+        // Initialize VSCode Terminals
+        "terminals.autorun": true,
+        "terminals.terminals": [
+          {
+            "name": "frontend",
+            "commands": ["cd frontend/", "clear"]
+          }
+        ]
       },
       "extensions": [
         // common
+        "fabiospampinato.vscode-terminals",
         "sohamkamani.code-eol",
         "ms-azuretools.vscode-docker",
         "donjayamanne.githistory",
