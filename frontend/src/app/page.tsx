@@ -1,7 +1,13 @@
-export default function Home() {
+import Link from 'next/link'
+
+export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between bg-red-100 p-24">
-      <h2>Hello Next!</h2>
+    <main className="container m-auto">
+      <ul>
+        <li>
+          <Link href="/chat">チャットへ</Link>
+        </li>
+      </ul>
     </main>
   )
 }
