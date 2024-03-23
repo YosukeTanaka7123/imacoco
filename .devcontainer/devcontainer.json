@@ -75,6 +75,7 @@
         "sohamkamani.code-eol",
         "ms-azuretools.vscode-docker",
         "donjayamanne.githistory",
+        "GitHub.copilot",
 
         // for the frontend
         "dbaeumer.vscode-eslint",
