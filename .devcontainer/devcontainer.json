@@ -78,7 +78,8 @@
 
         // for the frontend
         "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode"
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss"
 
         // for the backend
         // none
